@@ -34,4 +34,11 @@ subjects:
 - kind: ServiceAccount
   name: eginnovations
   namespace: default
-  
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: eginnovations-token
+  annotations:
+    kubernetes.io/service-account.name: eginnovations
+type: kubernetes.io/service-account-token
